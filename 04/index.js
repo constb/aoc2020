@@ -2,9 +2,7 @@ const fs = require("fs");
 const readline = require("readline");
 
 (async function () {
-  const rl = readline.createInterface({
-    input: fs.createReadStream("input.txt"),
-  });
+  const rl = readline.createInterface({ input: fs.createReadStream("input.txt") });
 
   const fields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid", "cid"];
   let lines = [];
@@ -27,8 +25,7 @@ const readline = require("readline");
 
         if (
           foundFields.length === fields.length ||
-          (foundFields.length === fields.length - 1 &&
-            !foundFields.includes("cid"))
+          (foundFields.length === fields.length - 1 && !foundFields.includes("cid"))
         ) {
           result++;
         }

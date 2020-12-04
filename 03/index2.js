@@ -29,5 +29,8 @@ const readline = require("readline");
     }
   }
 
-  console.log(result, result.reduce((acc, v) => acc * v, 1));
+  console.log(
+    result,
+    result.reduce((acc, v) => acc * v, 1)
+  );
 })();

@@ -5,12 +5,7 @@ const source = Array.from({ length: 2021 }, () => false);
 let n1010 = 0;
 
 (async function () {
-  const fileStream = fs.createReadStream("input.txt");
-
-  const rl = readline.createInterface({
-    input: fileStream,
-    crlfDelay: Infinity,
-  });
+  const rl = readline.createInterface({ input: fs.createReadStream("input.txt") });
 
   for await (let line of rl) {
     line = line.trim();

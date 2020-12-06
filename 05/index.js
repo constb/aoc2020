@@ -3,7 +3,7 @@ const lines = data.split(/\n/);
 
 let max = 0;
 for (let line of lines) {
-  const id = parseInt(line.replace(/(B|R)/g, "1").replace(/F|L/g, "0"), 2);
+  const id = parseInt(line.replace(/B|R/g, "1").replace(/F|L/g, "0"), 2);
   max = Math.max(max, id);
 }
 

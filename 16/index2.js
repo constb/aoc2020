@@ -26,7 +26,7 @@ const tickets = groups[2]
   .filter(Boolean);
 
 const mine = groups[1].split(/\n/)[1].split(",").map(Number);
-tickets.unshift([...mine]);
+tickets.unshift(mine);
 
 const allFieldNames = Object.keys(rules);
 let candidates = Array.from({ length: tickets[0].length }, () => [...allFieldNames]);
